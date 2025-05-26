@@ -27,7 +27,7 @@ app.post('/sign', (req, res) => {
     };
 
     const token = jwt.sign({ data: payload }, 'SECRET', {
-      expiresIn: 100000, // segundos
+      expiresIn: 100000,
     });
 
     return res.status(200).json({ token });
